@@ -40,6 +40,7 @@
 }
 
 
+
 @media (min-width: 1200px) { 
   .chat-content {
     height: 92.8vh ;
@@ -51,8 +52,6 @@
     height: 90.8vh !important;
   }
 }
-
-
 
 
 @media (max-width: 991px) {

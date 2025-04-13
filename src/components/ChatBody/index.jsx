@@ -80,7 +80,11 @@ const ChatBody = ({ selectedModel }) => {
     >
       <HistoryChat />
 
-      <div className="d-flex flex-column flex-grow-1">
+      <div
+        className={`flex-column flex-grow-1 ${
+          !selectedChat ? "d-none d-md-flex" : "d-flex"
+        }`}
+      >
         <div
           className="flex-grow-1 p-3 overflow-auto"
           style={{
