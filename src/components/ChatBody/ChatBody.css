@@ -39,26 +39,39 @@
   }
 }
 
-/*  768px*/
+
+@media (min-width: 1200px) { 
+  .chat-content {
+    height: 92.8vh ;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .chat-content{
+    height: 90.8vh !important;
+  }
+}
+
+
+
+
 @media (max-width: 991px) {
   .history-chat {
     min-width: 32% !important;
   }
-  .chat-content{
+  .chat-content {
     height: 95vh !important;
   }
 }
-
 
 @media (max-width: 768px) {
   .history-chat {
     min-width: 100% !important;
   }
-  .chat-content{
+  .chat-content {
     height: 91.5vh !important;
   }
   .dnonehistoryChat {
     display: none !important;
   }
-
 }

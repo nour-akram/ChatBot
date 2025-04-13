@@ -26,7 +26,9 @@ textarea::placeholder {
   background-clip: text; /* Clip the gradient to the text (fallback) */
   -webkit-text-fill-color: transparent; /* Ensure the text is transparent */
 }
-
+body{
+  background-color: black !important;
+}
 /*  */
 
 /* 
