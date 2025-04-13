@@ -38,6 +38,7 @@ const Header = ({ selectedModel, setSelectedModel }) => {
 
   const handleLogout = () => {
     dispatch(logout());
+    dispatch(setSelectedChat(null));
   };
 
   const handelBack = () => {
@@ -85,9 +86,9 @@ const Header = ({ selectedModel, setSelectedModel }) => {
         <div className="d-none d-sm-block">
           <DropdownButton
             id="dropdown-basic-button"
-            title={<span style={{ color: "white" }}>{selectedModel}</span>}
+            title={<span style={{ color: "white",fontSize:"14px" }}>{selectedModel}</span>}
             variant="none"
-            className="custom-dropdown rounded"
+            className="custom-dropdown rounded "
             style={{
               background: "linear-gradient(135deg, #ac1ed6, #c26e73)",
             }}
@@ -112,7 +113,7 @@ const Header = ({ selectedModel, setSelectedModel }) => {
           {!accessToken ? (
             <>
               <Button
-                className="me-2 d-none d-sm-block"
+                className="me-2 d-none d-sm-block px-2 py-1"
                 variant="none"
                 style={{
                   background: "linear-gradient(135deg, #ac1ed6, #c26e73)",
@@ -124,7 +125,7 @@ const Header = ({ selectedModel, setSelectedModel }) => {
                 Login
               </Button>
               <Button
-                className="me-3 d-none d-sm-block"
+                className="me-3 d-none d-sm-block px-2 py-1"
                 variant="none"
                 style={{
                   background: "linear-gradient(135deg, #ac1ed6, #c26e73)",
@@ -138,7 +139,7 @@ const Header = ({ selectedModel, setSelectedModel }) => {
             </>
           ) : (
             <Button
-              className="me-3 d-none d-sm-block"
+              className="me-3 d-none d-sm-block px-2 py-1"
               variant="none"
               style={{
                 background: "linear-gradient(135deg, #ac1ed6, #c26e73)",
