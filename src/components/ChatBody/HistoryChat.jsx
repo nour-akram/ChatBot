@@ -125,20 +125,22 @@ const HistoryChat = () => {
 
   return (
     <div
-      className={`p-3  history-chat   ${selectedChat ?"dnonehistoryChat" : "d-block"}`}
+      className={`p-3  history-chat   ${
+        selectedChat ? "dnonehistoryChat" : "d-block"
+      }`}
       style={{
-        minWidth: "18%",
+        minWidth: "20%",
       }}
     >
       <h5
-        className={`mb-5 fw-bolder fs-4 d-flex justify-content-between align-items-center mb-4`}
+        className={`mb-3 fw-bolder fs-4 d-flex justify-content-between align-items-center mb-4`}
         style={{
           background: "linear-gradient(135deg, #ac1ed6, #c26e73)",
           WebkitBackgroundClip: "text",
           WebkitTextFillColor: "transparent",
         }}
       >
-        <p className="m-0">Chat History</p>
+        <p className="m-0 fs-6">Chat History</p>
 
         <div style={{ position: "relative", display: "inline-block" }}>
           <svg width="0" height="0">
@@ -152,7 +154,7 @@ const HistoryChat = () => {
           <IoIosAddCircle
             style={{
               cursor: "pointer",
-              fontSize: "30px",
+              fontSize: "25px",
               fill: "url(#gradient)",
             }}
             onClick={handleAddClick}
@@ -184,7 +186,7 @@ const HistoryChat = () => {
               <li
                 key={chat._id}
                 onClick={() => handleChatClick(chat)}
-                className={`p-2 mb-3 rounded fs-5 fw-semibold d-flex justify-content-between align-items-start `}
+                className={`p-2 mb-1 rounded fs-5 fw-semibold d-flex justify-content-between align-items-start `}
                 style={{
                   cursor: "pointer",
                   // border: "1px solid white",
@@ -196,11 +198,11 @@ const HistoryChat = () => {
                 }}
               >
                 <div className="d-flex flex-column">
-                  <p className="m-0">{chat.title}</p>
+                  <p className="m-0 fs-6">{chat.title}</p>
                   <small
                     style={{
                       color: "white",
-                      fontSize: "12px",
+                      fontSize: "10px",
                       marginTop: "5px",
                     }}
                   >
@@ -233,7 +235,7 @@ const HistoryChat = () => {
                     <CiMenuKebab
                       style={{
                         cursor: "pointer",
-                        fontSize: "30px",
+                        fontSize: "20px",
                         rotate: "90deg",
                         fill: `url(#kebab-gradient-${chat._id})`,
                       }}

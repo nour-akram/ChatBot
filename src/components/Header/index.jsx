@@ -47,7 +47,7 @@ const Header = ({ selectedModel, setSelectedModel }) => {
   return (
     <>
       <div
-        className={`d-flex justify-content-between align-items-center p-3`}
+        className={`d-flex justify-content-between align-items-center p-2`}
         style={{ backgroundColor: "#000" }}
       >
         <div style={{ position: "relative" }} className="d-sm-none">

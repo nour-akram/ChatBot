@@ -45,7 +45,7 @@
     min-width: 32% !important;
   }
   .chat-content{
-    height: 93vh !important;
+    height: 95vh !important;
   }
 }
 
@@ -55,7 +55,7 @@
     min-width: 100% !important;
   }
   .chat-content{
-    height: 89vh !important;
+    height: 90.5vh !important;
   }
   .dnonehistoryChat {
     display: none !important;

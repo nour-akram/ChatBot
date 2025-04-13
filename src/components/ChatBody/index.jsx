@@ -76,7 +76,7 @@ const ChatBody = ({ selectedModel }) => {
   return (
     <div
       className="d-flex chat-content"
-      style={{ height: "90.5vh", backgroundColor: "#000" }}
+      style={{ height: "90.8vh", backgroundColor: "#000" }}
     >
       <HistoryChat />
 
@@ -103,9 +103,9 @@ const ChatBody = ({ selectedModel }) => {
               }`}
             >
               <div
-                className="p-2 my-1"
+                className="p-1 my-1"
                 style={{
-                  maxWidth: "70%",
+                  maxWidth: "60%",
                   wordWrap: "break-word",
                   borderRadius:
                     msg.senderType === "user"
@@ -129,15 +129,15 @@ const ChatBody = ({ selectedModel }) => {
                     src="https://i.pinimg.com/736x/82/47/55/8247558e54f9635b7f9cdd601483e37b.jpg"
                     alt="robot"
                     style={{
-                      width: "40px",
-                      height: "40px",
+                      width: "35px",
+                      height: "35px",
                       borderRadius: "50%",
                     }}
                   />
                 )}
                 <div>
                   <div className="d-flex align-items-center justify-content-between">
-                    <p className="mb-1">{msg.content}</p>
+                    <p className="mb-1 fs-6">{msg.content}</p>
                     {msg.senderType === "user" && (
                       <img src="double-tick.png" alt="true" />
                     )}
@@ -162,7 +162,7 @@ const ChatBody = ({ selectedModel }) => {
           )}
         </div>
 
-        <div className="p-3 d-flex align-items-center bg-black">
+        <div className="p-2 d-flex align-items-center bg-black">
           <Form.Control
             as="textarea"
             rows={1}
@@ -203,7 +203,7 @@ const ChatBody = ({ selectedModel }) => {
                 style={{
                   transform: "rotate(-45deg)",
                   fill: "url(#send-icon-gradient)",
-                  fontSize: "24px",
+                  fontSize: "20px",
                   cursor: "pointer",
                 }}
               />
