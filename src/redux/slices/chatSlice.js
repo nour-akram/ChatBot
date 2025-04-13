@@ -4,11 +4,12 @@ import Cookies from "js-cookie";
 import API_BASE_URL from "../../../api/config";
 import { logout } from "./authSlice";
 
-const token = Cookies.get("accessToken");
+
 export const fetchChatHistory = createAsyncThunk(
   "chat/fetchChatHistory",
   async (_, thunkAPI) => {
     try {
+      const token = Cookies.get("accessToken");
       const response = await axios.get(`${API_BASE_URL}/chats`, {
         headers: {
           Authorization: `Bearer ${token}`,
@@ -27,6 +28,7 @@ export const addChat = createAsyncThunk(
   "chat/addChat",
   async (chatData, thunkAPI) => {
     try {
+      const token = Cookies.get("accessToken");
       const response = await axios.post(`${API_BASE_URL}/chats`, chatData, {
         headers: {
           Authorization: `Bearer ${token}`,
@@ -45,6 +47,7 @@ export const updateChat = createAsyncThunk(
   "chat/updateChat",
   async ({ id, title }, thunkAPI) => {
     try {
+      const token = Cookies.get("accessToken");
       const response = await axios.patch(
         `${API_BASE_URL}/chats/${id}`,
         { title },
@@ -67,6 +70,7 @@ export const deleteChat = createAsyncThunk(
   "chat/deleteChat",
   async (id, thunkAPI) => {
     try {
+      const token = Cookies.get("accessToken");
       await axios.delete(`${API_BASE_URL}/chats/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
