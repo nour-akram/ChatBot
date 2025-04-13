@@ -123,6 +123,7 @@ const HistoryChat = () => {
     </Popover>
   );
 
+
   return (
     <div
       className={`p-3  history-chat   ${
@@ -141,25 +142,32 @@ const HistoryChat = () => {
         }}
       >
         <p className="m-0 fs-6">Chat History</p>
-
-        <div style={{ position: "relative", display: "inline-block" }}>
-          <svg width="0" height="0">
-            <defs>
-              <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="#ac1ed6" />
-                <stop offset="100%" stopColor="#c26e73" />
-              </linearGradient>
-            </defs>
-          </svg>
-          <IoIosAddCircle
-            style={{
-              cursor: "pointer",
-              fontSize: "25px",
-              fill: "url(#gradient)",
-            }}
-            onClick={handleAddClick}
-          />
-        </div>
+        {accessToken && (
+          <div style={{ position: "relative", display: "inline-block" }}>
+            <svg width="0" height="0">
+              <defs>
+                <linearGradient
+                  id="gradient"
+                  x1="0%"
+                  y1="0%"
+                  x2="100%"
+                  y2="100%"
+                >
+                  <stop offset="0%" stopColor="#ac1ed6" />
+                  <stop offset="100%" stopColor="#c26e73" />
+                </linearGradient>
+              </defs>
+            </svg>
+            <IoIosAddCircle
+              style={{
+                cursor: "pointer",
+                fontSize: "25px",
+                fill: "url(#gradient)",
+              }}
+              onClick={handleAddClick}
+            />
+          </div>
+        )}
       </h5>
 
       {loading && <p style={{ color: "white" }}>Loading...</p>}
